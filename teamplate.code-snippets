@@ -1,0 +1,68 @@
+{
+	"CP_Template": {
+		"prefix": "cp_template",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"",
+			"using namespace std;",
+			"",
+			"int main() {",
+			"    ios_base::sync_with_stdio(false); cin.tie(NULL);",
+			"",
+			"    #ifndef ONLINE_JUDGE",
+			"        freopen(\"input.txt\", \"r\", stdin);",
+			"        freopen(\"output.txt\", \"w\", stdout);",
+			"    #endif",
+			"",
+			"    int tt; cin >> tt;",
+			"",
+			"    while (tt--){",
+			"        ",
+			"        ",
+			"    }",
+			"    return 0;",
+			"}"
+		],
+		"description": "Competitive Programming Template"
+	},
+    "Read Integer": {
+        "prefix": "int n",
+        "body": [
+            "int n; cin >> n;"
+        ],
+        "description": "Reads an integer from input"
+    },
+	"Read Vector": {
+        "prefix": "vector<int>a(n);",
+        "body": [
+            "vector<int> a(n);",
+            "for (auto &i : a) {",
+            "    cin >> i;",
+            "}"
+        ],
+        "description": "Reads a vector of size n from input"
+    },
+	"Greatest Common Divisor": {
+		"prefix": "gcd",
+		"body": [
+			"int gcd(int a, int b) {",
+			"    return b == 0 ? a : gcd(b, a % b);",
+			"}"
+		],
+		"description": "Compute GCD using Euclidean algorithm"
+	},
+	"Check Prime Number": {
+			"prefix": "isprime",
+			"body": [
+			"bool isprime(int n) {",
+			"    if (n == 2 || n == 3) return true;",
+			"    for (int i = 2; i * i <= n; i++) {",
+			"        if (n % i == 0) return false;",
+			"    }",
+			"    return true;",
+			"}"
+		],
+		"description": "Checks if a number is prime"
+	}
+	
+}
