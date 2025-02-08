@@ -1,47 +1,91 @@
 {
-	"CP_Template": {
-		"prefix": "cp_template",
+	"Template1": {
+		"prefix": "cp1",
 		"body": [
 			"#include <bits/stdc++.h>",
-			"",
 			"using namespace std;",
+			"using ll = long long;",
 			"",
 			"int main() {",
-			"    ios_base::sync_with_stdio(false); cin.tie(NULL);",
+			"    ios_base::sync_with_stdio(0);",
+			"    cin.tie(0);",
 			"",
 			"    #ifndef ONLINE_JUDGE",
-			"        freopen(\"input.txt\", \"r\", stdin);",
-			"        freopen(\"output.txt\", \"w\", stdout);",
+			"    freopen(\"input.txt\", \"r\", stdin);",
+			"    freopen(\"output.txt\", \"w\", stdout);",
 			"    #endif",
 			"",
-			"    int tt; cin >> tt;",
+			"    int tt;",
+			"    cin >> tt;",
 			"",
-			"    while (tt--){",
-			"        ",
-			"        ",
+			"    while (tt--) {",
+			"",
 			"    }",
 			"    return 0;",
 			"}"
 		],
-		"description": "Competitive Programming Template"
+		"description": "Basic CP template"
 	},
-    "Read Integer": {
-        "prefix": "int n",
-        "body": [
-            "int n; cin >> n;"
-        ],
-        "description": "Reads an integer from input"
-    },
-	"Read Vector": {
-        "prefix": "vector<int>a(n);",
-        "body": [
-            "vector<int> a(n);",
-            "for (auto &i : a) {",
-            "    cin >> i;",
-            "}"
-        ],
-        "description": "Reads a vector of size n from input"
-    },
+
+	"Template2": {
+		"prefix": "cp2",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"using ll = long long;",
+			"",
+			"template <typename T>",
+			"istream &operator>>(istream &istream, vector<T> &v) {",
+			"    for (auto &it : v) istream >> it;",
+			"    return istream;",
+			"}",
+			"",
+			"template <typename T>",
+			"ostream &operator<<(ostream &ostream, const vector<T> &v) {",
+			"    for (const auto &it : v) ostream << it << ' ';",
+			"    return ostream;",
+			"}",
+			"",
+			"int main() {",
+			"    ios_base::sync_with_stdio(0);",
+			"    cin.tie(0);",
+			"",
+			"    #ifndef ONLINE_JUDGE",
+			"    freopen(\"input.txt\", \"r\", stdin);",
+			"    freopen(\"output.txt\", \"w\", stdout);",
+			"    #endif",
+			"",
+			"    int tt;",
+			"    cin >> tt;",
+			"    while (tt--) {",
+			"",
+			"    }",
+			"    return 0;",
+			"}"
+		],
+		"description": "CP template with vector I/O operators"
+	},
+
+	"Prefix Sum": {
+		"prefix": "prefix",
+		"body": [
+			"vector<int> prefix(n + 1, 0);",
+			"for (int i = 1; i <= n; i++) {",
+			"    prefix[i] = prefix[i - 1] + a[i - 1];",
+			"}"
+		],
+		"description": "Computes prefix sum array"
+	},
+
+	"Read Integer": {
+		"prefix": "intn",
+		"body": [
+			"int n;",
+			"cin >> n;"
+		],
+		"description": "Reads an integer from input"
+	},
+
 	"Greatest Common Divisor": {
 		"prefix": "gcd",
 		"body": [
@@ -51,18 +95,28 @@
 		],
 		"description": "Compute GCD using Euclidean algorithm"
 	},
+
 	"Check Prime Number": {
-			"prefix": "isprime",
-			"body": [
+		"prefix": "isprime",
+		"body": [
 			"bool isprime(int n) {",
+			"    if (n < 2) return false;",
 			"    if (n == 2 || n == 3) return true;",
-			"    for (int i = 2; i * i <= n; i++) {",
+			"    if (n % 2 == 0) return false;",
+			"    for (int i = 3; i * i <= n; i += 2) {",
 			"        if (n % i == 0) return false;",
 			"    }",
 			"    return true;",
 			"}"
 		],
 		"description": "Checks if a number is prime"
+	},
+
+	"All": {
+		"prefix": "all",
+		"body": [
+			"a.begin(), a.end()"
+		],
+		"description": "Shortcut for iterating over a container"
 	}
-	
 }
