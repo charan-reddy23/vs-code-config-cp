@@ -1,17 +1,18 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
 
 int main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
-    int tcs = 1;
-    //cin >> tcs;
-    while (tcs--){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int tt;
+    cin >> tt;
+
+    while (tt--) {
+
+        
         
     }
     return 0;
